@@ -1,0 +1,30 @@
+.finger {
+  position: fixed;
+
+  top: 30px;
+  right: 0px;
+
+  transform: rotate(-42deg);
+  z-index: 1000;
+
+  animation: slide-in 5s linear 1s infinite alternate;
+}
+
+@keyframes slide-in {
+  0% {
+    bottom: 30px;
+    right: 30px;
+
+    transform: rotate(0deg);
+  }
+  50% {
+    right: 0px;
+
+    transform: rotate(-50deg);
+  }
+  100% {
+    bottom: 30px;
+    right: 30px;
+    transform: rotate(0deg);
+  }
+}

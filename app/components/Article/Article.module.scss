@@ -1,0 +1,75 @@
+.article {
+  max-width: 900px;
+  margin: auto;
+  color: #111;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 36px;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.meta {
+  font-size: 14px;
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 6px 0;
+}
+
+.figure {
+  margin: 20px 0;
+}
+
+.image {
+  width: 40%;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.caption {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.body {
+  column-count: 2;
+  column-gap: 40px;
+
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.body p:first-child::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 32px;
+  }
+
+  .body {
+    column-count: 1;
+  }
+}

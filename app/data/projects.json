@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Portfolio Storytelling",
+    "description": "Portfolio interactif avec scroll storytelling et animations.",
+    "tech": ["React", "Next.js", "GSAP", "Tailwind CSS"]
+  },
+  {
+    "id": 2,
+    "title": "Site E-commerce",
+    "description": "Marketplace avec gestion des produits et animations dynamiques.",
+    "tech": ["React", "Redux", "Tailwind CSS"]
+  }
+]

@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "Newspaper";
+  src: url("/fonts/newspaper.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --paper: #fcfcfc;
+  --paper-border: #d6cdb8;
+  --text: #111;
+  --font-newspaper: "Newspaper", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Newspaper", serif;
+  color: var(--text);
+  font-family: var(--font-newspaper);
+}
+
+.page {
+  position: relative;
+  background: #f7f2e6;
+}
+
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/assets/newspaper.jpg");
+  background-size: cover;
+  background-position: center;
+
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.page-root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.flipbook-wrapper {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* overflow: auto;    */
+}
+
+/* wrapper de la page (enfant direct de HTMLFlipBook) */
+.react-pageflip .page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 2000px; /* optionnel */
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.page-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.page-face {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-front {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+
+.page-back {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.page-content {
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+  overflow: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.react-pageflip .page,
+.react-pageflip .page > .page-inner {
+  transform-style: preserve-3d;
+}
+
+.page-article {
+  width: 100%;
+}
+
+.headline {
+  font-family: "Newspaper", serif;
+  font-size: 48px;
+  margin: 0 0 8px 0;
+}
+.subtitle {
+  font-size: 22px;
+  margin: 0 0 16px 0;
+}
+.lead {
+  max-width: 56ch;
+  line-height: 1.6;
+}
+
+.profile {
+  filter: grayscale(100%);
+}
+
+@media (max-width: 700px) {
+  .headline {
+    font-size: 28px;
+  }
+}
