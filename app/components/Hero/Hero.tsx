@@ -18,40 +18,39 @@ export default function Hero() {
             <Typewriter text="Développeur Frontend" speed={0.04} />
           </h2>
         </div>
-        {/* <Image
-          src="/assets/me.png"
-          alt="photo de profil"
-          width={300}
-          height={300}
-          className={styles.profile}
-        /> */}
 
         <Article
-          title="The Rise of the Web Artisan"
-          subtitle="How creativity returned to development"
-          author="A. Developer"
-          date="March 1926"
+          title="Penser, concevoir et développer des interfaces"
+          subtitle="Entre technique, créativité et expérience utilisateur"
+          author="Maxime Leconte"
+          date="Aujourd'hui"
           image={{
             src: "/assets/me.png",
-            alt: "Developer portrait",
+            alt: "Photo de Maxime Leconte",
             width: 300,
             height: 300,
-            caption: "A developer at work in the early morning.",
+            caption: "Maxime Leconte, développeur frontend.",
           }}>
           <p>
-            In the early days of the web, crafting a website was closer to an
-            artisan's trade than to industrial production.
+            Au fil de mes projets, j’ai développé une solide expertise dans les
+            technologies du web moderne, notamment JavaScript, TypeScript,
+            React, Next.js et Angular. J’accorde une attention particulière à la
+            qualité du code, à la maintenabilité des applications et à la
+            performance des interfaces.
+          </p>
+          {/* 
+          <p>
+            Pour moi, le développement frontend ne se limite pas à écrire du
+            code : c’est un équilibre entre logique, design et storytelling.
+            Chaque interface est une occasion de créer une expérience claire,
+            élégante et agréable pour l’utilisateur.
           </p>
 
           <p>
-            Developers experimented freely, mixing typography, layout and
-            storytelling to create unique digital experiences.
-          </p>
-
-          <p>
-            Today a new generation is rediscovering this philosophy and bringing
-            narrative design back into modern interfaces.
-          </p>
+            J’aime concevoir des projets qui allient rigueur technique et
+            créativité, avec l’objectif de construire des produits numériques
+            utiles, durables et bien pensés.
+          </p> */}
         </Article>
       </div>
     </section>

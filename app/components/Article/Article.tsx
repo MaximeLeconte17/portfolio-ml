@@ -52,14 +52,23 @@ export default function Article({
 
       {image && (
         <figure className={styles.figure}>
-          <Image
-            src={image.src}
-            alt={image.alt}
-            width={image.width}
-            height={image.height}
-            priority={image.priority}
-            className={styles.image}
-          />
+          <div className={styles.imgTxt}>
+            <Image
+              src={image.src}
+              alt={image.alt}
+              width={image.width}
+              height={image.height}
+              priority={image.priority}
+              className={styles.image}
+            />
+            <p className={(styles.body, styles.p)}>
+              Je suis développeur frontend spécialisé dans la création
+              d'interfaces web modernes, performantes et intuitives. Mon travail
+              consiste à transformer des idées, des designs et des besoins
+              utilisateurs en expériences interactives accessibles directement
+              dans le navigateur.
+            </p>
+          </div>
 
           {image.caption && (
             <figcaption className={styles.caption}>{image.caption}</figcaption>

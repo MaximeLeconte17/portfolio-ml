@@ -10,7 +10,7 @@
 }
 
 .title {
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1.1;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -34,8 +34,14 @@
   margin: 20px 0;
 }
 
+.imgTxt {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
 .image {
-  width: 40%;
+  width: 30%;
   height: auto;
   filter: grayscale(100%);
 }
@@ -64,6 +70,20 @@
   font-weight: bold;
 }
 
+.p::first-letter {
+  float: left;
+  font-size: 72px;
+  line-height: 0.8;
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+.p {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
 @media (max-width: 700px) {
   .title {
     font-size: 32px;
@@ -71,5 +91,10 @@
 
   .body {
     column-count: 1;
+  }
+
+  .imgTxt {
+    display: flex;
+    flex-direction: column;
   }
 }
